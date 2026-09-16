@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags & Attributes Reference</title>
+  <center><p>Created by <a href="https://github.com/Waiil00/dev-cursus.git" target="_blank" rel="noopener">Cl0ud3n</a></p></center >
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#172033;line-height:1.55}
+    header{background:#111827;color:white;padding:42px 24px;text-align:center}
+    header h1{margin:0 0 8px;font-size:38px}
+    header p{margin:0;color:#cbd5e1}
+    nav{position:sticky;top:0;z-index:10;background:white;border-bottom:1px solid #ddd;padding:12px 20px;overflow:auto;white-space:nowrap}
+    nav a{display:inline-block;margin-right:16px;color:#2563eb;text-decoration:none;font-weight:bold}
+    main{max-width:1150px;margin:30px auto;padding:0 20px}
+    section{margin-bottom:42px}
+    h2{border-bottom:3px solid #2563eb;padding-bottom:8px}
+    h3{margin-bottom:8px}
+    .card{background:white;border:1px solid #e1e5ec;border-radius:12px;padding:20px;margin:14px 0;box-shadow:0 2px 8px #0000000a}
+    code{background:#eef2ff;padding:2px 6px;border-radius:5px;color:#4338ca}
+    pre{background:#111827;color:#e5e7eb;padding:16px;border-radius:8px;overflow:auto}
+    table{width:100%;border-collapse:collapse;background:white}
+    th,td{border:1px solid #dbe1ea;padding:10px;text-align:left;vertical-align:top}
+    th{background:#eef2f7}
+    .tag{color:#dc2626;font-weight:bold}
+    .attr{color:#059669;font-weight:bold}
+    .value{color:#7c3aed}
+    .note{background:#eff6ff;border-left:4px solid #2563eb;padding:12px 15px;border-radius:5px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+    footer{text-align:center;padding:35px;background:#111827;color:#cbd5e1}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>HTML Tags & Attributes Reference</h1>
+  <p>A practical static HTML cheat sheet with descriptions and examples.</p>
+</header>
+
+<nav>
+  <a href="#structure">Structure</a>
+  <a href="#text">Text</a>
+  <a href="#links">Links</a>
+  <a href="#media">Media</a>
+  <a href="#lists">Lists</a>
+  <a href="#semantic">Semantic</a>
+  <a href="#tables">Tables</a>
+  <a href="#forms">Forms</a>
+  <a href="#interactive">Interactive</a>
+  <a href="#global">Global Attributes</a>
+  <a href="#aria">ARIA</a>
+  <a href="#events">Events</a>
+</nav>
+
+<main>
+
+<section id="structure">
+<h2>1. Document Structure</h2>
+<div class="card">
+<table>
+<tr><th>Tag</th><th>Description</th><th>Example</th></tr>
+<tr><td class="tag">&lt;html&gt;</td><td>Root element of an HTML document.</td><td><code>&lt;html lang="en"&gt;</code></td></tr>
+<tr><td class="tag">&lt;head&gt;</td><td>Contains metadata and resources.</td><td><code>&lt;head&gt;...&lt;/head&gt;</code></td></tr>
+<tr><td class="tag">&lt;body&gt;</td><td>Contains visible page content.</td><td><code>&lt;body&gt;Hello&lt;/body&gt;</code></td></tr>
+<tr><td class="tag">&lt;title&gt;</td><td>Sets the browser tab title.</td><td><code>&lt;title&gt;My Site&lt;/title&gt;</code></td></tr>
+<tr><td class="tag">&lt;meta&gt;</td><td>Defines metadata.</td><td><code>&lt;meta charset="UTF-8"&gt;</code></td></tr>
+<tr><td class="tag">&lt;link&gt;</td><td>Connects external resources such as CSS.</td><td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td></tr>
+<tr><td class="tag">&lt;style&gt;</td><td>Contains internal CSS.</td><td><code>&lt;style&gt;body{...}&lt;/style&gt;</code></td></tr>
+<tr><td class="tag">&lt;script&gt;</td><td>Loads or contains JavaScript.</td><td><code>&lt;script src="app.js"&gt;&lt;/script&gt;</code></td></tr>
+<tr><td class="tag">&lt;base&gt;</td><td>Defines the base URL for relative URLs.</td><td><code>&lt;base href="/"&gt;</code></td></tr>
+<tr><td class="tag">&lt;noscript&gt;</td><td>Content displayed when JavaScript is unavailable.</td><td><code>&lt;noscript&gt;Enable JS&lt;/noscript&gt;</code></td></tr>
+</table>
+</div>
+</section>
+
+<section id="text">
+<h2>2. Text & Headings</h2>
+<div class="card">
+<table>
+<tr><th>Tag</th><th>Description</th></tr>
+<tr><td class="tag">&lt;h1&gt;–&lt;h6&gt;</td><td>Six levels of headings.</td></tr>
+<tr><td class="tag">&lt;p&gt;</td><td>Paragraph.</td></tr>
+<tr><td class="tag">&lt;br&gt;</td><td>Line break.</td></tr>
+<tr><td class="tag">&lt;hr&gt;</td><td>Thematic horizontal break.</td></tr>
+<tr><td class="tag">&lt;strong&gt;</td><td>Strong importance.</td></tr>
+<tr><td class="tag">&lt;em&gt;</td><td>Emphasis.</td></tr>
+<tr><td class="tag">&lt;b&gt;</td><td>Stylistically bold text.</td></tr>
+<tr><td class="tag">&lt;i&gt;</td><td>Alternate voice or idiomatic text.</td></tr>
+<tr><td class="tag">&lt;u&gt;</td><td>Non-textual annotation.</td></tr>
+<tr><td class="tag">&lt;s&gt;</td><td>Text that is no longer accurate/relevant.</td></tr>
+<tr><td class="tag">&lt;mark&gt;</td><td>Highlighted text.</td></tr>
+<tr><td class="tag">&lt;small&gt;</td><td>Small print or side comments.</td></tr>
+<tr><td class="tag">&lt;sub&gt;</td><td>Subscript.</td></tr>
+<tr><td class="tag">&lt;sup&gt;</td><td>Superscript.</td></tr>
+<tr><td class="tag">&lt;del&gt;</td><td>Deleted content.</td></tr>
+<tr><td class="tag">&lt;ins&gt;</td><td>Inserted content.</td></tr>
+<tr><td class="tag">&lt;code&gt;</td><td>Inline computer code.</td></tr>
+<tr><td class="tag">&lt;kbd&gt;</td><td>Keyboard input.</td></tr>
+<tr><td class="tag">&lt;pre&gt;</td><td>Preformatted text.</td></tr>
+<tr><td class="tag">&lt;blockquote&gt;</td><td>Long quotation.</td></tr>
+<tr><td class="tag">&lt;q&gt;</td><td>Short inline quotation.</td></tr>
+<tr><td class="tag">&lt;abbr&gt;</td><td>Abbreviation.</td></tr>
+<tr><td class="tag">&lt;cite&gt;</td><td>Title of a work.</td></tr>
+<tr><td class="tag">&lt;time&gt;</td><td>Date/time.</td></tr>
+<tr><td class="tag">&lt;address&gt;</td><td>Contact information.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="links">
+<h2>3. Links</h2>
+<div class="card">
+<h3>&lt;a&gt; — Anchor</h3>
+<p>Creates a hyperlink.</p>
+<pre>&lt;a href="https://example.com" target="_blank" rel="noopener"&gt;
+  Visit website
+&lt;/a&gt;</pre>
+<table>
+<tr><th>Attribute</th><th>Description</th></tr>
+<tr><td class="attr">href</td><td>Destination URL.</td></tr>
+<tr><td class="attr">target</td><td>Where to open the destination.</td></tr>
+<tr><td class="attr">rel</td><td>Relationship/security information.</td></tr>
+<tr><td class="attr">download</td><td>Requests downloading the resource.</td></tr>
+<tr><td class="attr">hreflang</td><td>Language of the linked resource.</td></tr>
+<tr><td class="attr">type</td><td>Advises the linked resource MIME type.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="media">
+<h2>4. Images, Audio & Video</h2>
+<div class="card">
+<table>
+<tr><th>Tag</th><th>Description</th><th>Important attributes</th></tr>
+<tr><td class="tag">&lt;img&gt;</td><td>Displays an image.</td><td><code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code>, <code>loading</code>, <code>srcset</code>, <code>sizes</code></td></tr>
+<tr><td class="tag">&lt;picture&gt;</td><td>Provides responsive image alternatives.</td><td>Usually contains <code>&lt;source&gt;</code> and <code>&lt;img&gt;</code>.</td></tr>
+<tr><td class="tag">&lt;source&gt;</td><td>Defines media/image source.</td><td><code>src</code>, <code>srcset</code>, <code>type</code>, <code>media</code></td></tr>
+<tr><td class="tag">&lt;audio&gt;</td><td>Embeds audio.</td><td><code>src</code>, <code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>muted</code>, <code>preload</code></td></tr>
+<tr><td class="tag">&lt;video&gt;</td><td>Embeds video.</td><td><code>src</code>, <code>controls</code>, <code>poster</code>, <code>autoplay</code>, <code>loop</code>, <code>muted</code></td></tr>
+<tr><td class="tag">&lt;track&gt;</td><td>Provides subtitles/captions for media.</td><td><code>kind</code>, <code>src</code>, <code>srclang</code>, <code>label</code>, <code>default</code></td></tr>
+<tr><td class="tag">&lt;iframe&gt;</td><td>Embeds another webpage.</td><td><code>src</code>, <code>width</code>, <code>height</code>, <code>sandbox</code>, <code>loading</code></td></tr>
+</table>
+</div>
+</section>
+
+<section id="lists">
+<h2>5. Lists</h2>
+<div class="card">
+<pre>&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Orange&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol start="1"&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+<table>
+<tr><th>Tag</th><th>Description</th><th>Attributes</th></tr>
+<tr><td class="tag">&lt;ul&gt;</td><td>Unordered list.</td><td>Global attributes.</td></tr>
+<tr><td class="tag">&lt;ol&gt;</td><td>Ordered list.</td><td><code>start</code>, <code>reversed</code>, <code>type</code></td></tr>
+<tr><td class="tag">&lt;li&gt;</td><td>List item.</td><td><code>value</code> for ordered lists.</td></tr>
+<tr><td class="tag">&lt;dl&gt;</td><td>Description list.</td><td>Global attributes.</td></tr>
+<tr><td class="tag">&lt;dt&gt;</td><td>Term/name in a description list.</td><td>Global attributes.</td></tr>
+<tr><td class="tag">&lt;dd&gt;</td><td>Description/value.</td><td>Global attributes.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="semantic">
+<h2>6. Semantic Layout</h2>
+<div class="card">
+<table>
+<tr><th>Tag</th><th>Description</th></tr>
+<tr><td class="tag">&lt;header&gt;</td><td>Introductory/header content.</td></tr>
+<tr><td class="tag">&lt;nav&gt;</td><td>Navigation links.</td></tr>
+<tr><td class="tag">&lt;main&gt;</td><td>Main content of the document.</td></tr>
+<tr><td class="tag">&lt;section&gt;</td><td>Thematic section.</td></tr>
+<tr><td class="tag">&lt;article&gt;</td><td>Self-contained piece of content.</td></tr>
+<tr><td class="tag">&lt;aside&gt;</td><td>Related/secondary content.</td></tr>
+<tr><td class="tag">&lt;footer&gt;</td><td>Footer content.</td></tr>
+<tr><td class="tag">&lt;search&gt;</td><td>Container for search controls.</td></tr>
+<tr><td class="tag">&lt;div&gt;</td><td>Generic block container.</td></tr>
+<tr><td class="tag">&lt;span&gt;</td><td>Generic inline container.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="tables">
+<h2>7. Tables</h2>
+<div class="card">
+<pre>&lt;table&gt;
+  &lt;caption&gt;Students&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alex&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<table>
+<tr><th>Tag/Attribute</th><th>Description</th></tr>
+<tr><td class="tag">&lt;table&gt;</td><td>Table container.</td></tr>
+<tr><td class="tag">&lt;caption&gt;</td><td>Table title.</td></tr>
+<tr><td class="tag">&lt;thead&gt;</td><td>Header rows.</td></tr>
+<tr><td class="tag">&lt;tbody&gt;</td><td>Main table rows.</td></tr>
+<tr><td class="tag">&lt;tfoot&gt;</td><td>Footer rows.</td></tr>
+<tr><td class="tag">&lt;tr&gt;</td><td>Table row.</td></tr>
+<tr><td class="tag">&lt;th&gt;</td><td>Header cell.</td></tr>
+<tr><td class="tag">&lt;td&gt;</td><td>Data cell.</td></tr>
+<tr><td class="attr">colspan</td><td>Makes a cell span multiple columns.</td></tr>
+<tr><td class="attr">rowspan</td><td>Makes a cell span multiple rows.</td></tr>
+<tr><td class="attr">scope</td><td>Defines what a header cell describes.</td></tr>
+<tr><td class="attr">headers</td><td>Associates a cell with header cells.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="forms">
+<h2>8. Forms & Inputs</h2>
+<div class="card">
+<pre>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input
+    id="email"
+    name="email"
+    type="email"
+    placeholder="you@example.com"
+    required&gt;
+
+  &lt;label for="country"&gt;Country&lt;/label&gt;
+  &lt;select id="country" name="country"&gt;
+    &lt;option value="ma"&gt;Morocco&lt;/option&gt;
+    &lt;option value="fr"&gt;France&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;textarea name="message" rows="5"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<table>
+<tr><th>Element</th><th>Description</th><th>Important attributes</th></tr>
+<tr><td class="tag">&lt;form&gt;</td><td>Form container.</td><td><code>action</code>, <code>method</code>, <code>enctype</code>, <code>target</code>, <code>autocomplete</code>, <code>novalidate</code></td></tr>
+<tr><td class="tag">&lt;label&gt;</td><td>Label for a form control.</td><td><code>for</code></td></tr>
+<tr><td class="tag">&lt;input&gt;</td><td>Single-line/input control.</td><td><code>type</code>, <code>name</code>, <code>value</code>, <code>placeholder</code>, <code>required</code>, <code>disabled</code>, <code>readonly</code>, <code>checked</code>, <code>min</code>, <code>max</code>, <code>step</code>, <code>pattern</code>, <code>minlength</code>, <code>maxlength</code>, <code>accept</code>, <code>multiple</code></td></tr>
+<tr><td class="tag">&lt;textarea&gt;</td><td>Multiline text input.</td><td><code>rows</code>, <code>cols</code>, <code>placeholder</code>, <code>maxlength</code>, <code>required</code>, <code>readonly</code></td></tr>
+<tr><td class="tag">&lt;button&gt;</td><td>Clickable button.</td><td><code>type</code>, <code>name</code>, <code>value</code>, <code>disabled</code>, <code>autofocus</code></td></tr>
+<tr><td class="tag">&lt;select&gt;</td><td>Dropdown/list control.</td><td><code>name</code>, <code>multiple</code>, <code>size</code>, <code>required</code>, <code>disabled</code></td></tr>
+<tr><td class="tag">&lt;option&gt;</td><td>Option in a select/datalist.</td><td><code>value</code>, <code>selected</code>, <code>disabled</code>, <code>label</code></td></tr>
+<tr><td class="tag">&lt;optgroup&gt;</td><td>Groups options.</td><td><code>label</code>, <code>disabled</code></td></tr>
+<tr><td class="tag">&lt;fieldset&gt;</td><td>Groups form controls.</td><td><code>disabled</code>, <code>form</code>, <code>name</code></td></tr>
+<tr><td class="tag">&lt;legend&gt;</td><td>Caption for a fieldset.</td><td>Global attributes.</td></tr>
+<tr><td class="tag">&lt;datalist&gt;</td><td>Suggested input values.</td><td><code>id</code></td></tr>
+<tr><td class="tag">&lt;output&gt;</td><td>Displays a calculation/result.</td><td><code>for</code>, <code>form</code>, <code>name</code></td></tr>
+<tr><td class="tag">&lt;progress&gt;</td><td>Progress indicator.</td><td><code>value</code>, <code>max</code></td></tr>
+<tr><td class="tag">&lt;meter&gt;</td><td>Scalar measurement within a known range.</td><td><code>value</code>, <code>min</code>, <code>max</code>, <code>low</code>, <code>high</code>, <code>optimum</code></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Input types</h3>
+<div class="grid">
+<div><code>text</code> — normal text</div>
+<div><code>password</code> — password</div>
+<div><code>email</code> — email address</div>
+<div><code>number</code> — numeric input</div>
+<div><code>tel</code> — telephone number</div>
+<div><code>url</code> — URL</div>
+<div><code>search</code> — search field</div>
+<div><code>date</code> — date</div>
+<div><code>datetime-local</code> — local date/time</div>
+<div><code>month</code> — month</div>
+<div><code>week</code> — week</div>
+<div><code>time</code> — time</div>
+<div><code>color</code> — color picker</div>
+<div><code>file</code> — file upload</div>
+<div><code>checkbox</code> — checkbox</div>
+<div><code>radio</code> — radio button</div>
+<div><code>range</code> — slider</div>
+<div><code>hidden</code> — hidden value</div>
+<div><code>submit</code> — submit button</div>
+<div><code>reset</code> — reset button</div>
+<div><code>button</code> — generic button</div>
+<div><code>image</code> — image submit button</div>
+</div>
+</div>
+</section>
+
+<section id="interactive">
+<h2>9. Interactive & Embedded Elements</h2>
+<div class="card">
+<table>
+<tr><th>Tag</th><th>Description</th><th>Attributes</th></tr>
+<tr><td class="tag">&lt;details&gt;</td><td>Expandable disclosure widget.</td><td><code>open</code>, <code>name</code></td></tr>
+<tr><td class="tag">&lt;summary&gt;</td><td>Visible heading for details.</td><td>Global attributes.</td></tr>
+<tr><td class="tag">&lt;dialog&gt;</td><td>Dialog/modal.</td><td><code>open</code></td></tr>
+<tr><td class="tag">&lt;canvas&gt;</td><td>Drawing surface controlled by JS.</td><td><code>width</code>, <code>height</code></td></tr>
+<tr><td class="tag">&lt;object&gt;</td><td>Embeds an external resource.</td><td><code>data</code>, <code>type</code>, <code>width</code>, <code>height</code></td></tr>
+<tr><td class="tag">&lt;embed&gt;</td><td>Embeds external content.</td><td><code>src</code>, <code>type</code>, <code>width</code>, <code>height</code></td></tr>
+</table>
+</div>
+</section>
+
+<section id="global">
+<h2>10. Global Attributes</h2>
+<div class="card">
+<p>Global attributes can generally be used on most HTML elements.</p>
+<table>
+<tr><th>Attribute</th><th>Description</th><th>Example</th></tr>
+<tr><td class="attr">id</td><td>Unique identifier.</td><td><code>id="main"</code></td></tr>
+<tr><td class="attr">class</td><td>One or more CSS/JS classes.</td><td><code>class="card active"</code></td></tr>
+<tr><td class="attr">style</td><td>Inline CSS.</td><td><code>style="color:red"</code></td></tr>
+<tr><td class="attr">title</td><td>Advisory tooltip/title.</td><td><code>title="More info"</code></td></tr>
+<tr><td class="attr">lang</td><td>Language of content.</td><td><code>lang="en"</code></td></tr>
+<tr><td class="attr">dir</td><td>Text direction.</td><td><code>dir="rtl"</code></td></tr>
+<tr><td class="attr">hidden</td><td>Marks content as hidden.</td><td><code>hidden</code></td></tr>
+<tr><td class="attr">contenteditable</td><td>Makes content editable.</td><td><code>contenteditable="true"</code></td></tr>
+<tr><td class="attr">tabindex</td><td>Controls keyboard focus order.</td><td><code>tabindex="0"</code></td></tr>
+<tr><td class="attr">spellcheck</td><td>Requests spell checking.</td><td><code>spellcheck="true"</code></td></tr>
+<tr><td class="attr">draggable</td><td>Controls dragging behavior.</td><td><code>draggable="true"</code></td></tr>
+<tr><td class="attr">translate</td><td>Hints whether content should be translated.</td><td><code>translate="no"</code></td></tr>
+<tr><td class="attr">data-*</td><td>Custom data attributes.</td><td><code>data-user-id="123"</code></td></tr>
+<tr><td class="attr">role</td><td>ARIA semantic role.</td><td><code>role="button"</code></td></tr>
+</table>
+</div>
+</section>
+
+<section id="aria">
+<h2>11. Accessibility / ARIA</h2>
+<div class="card">
+<p class="note">ARIA adds accessibility semantics. Prefer native HTML elements when they already provide the required semantics.</p>
+<table>
+<tr><th>Attribute</th><th>Purpose</th></tr>
+<tr><td class="attr">aria-label</td><td>Accessible name supplied directly.</td></tr>
+<tr><td class="attr">aria-labelledby</td><td>Uses another element as the accessible name.</td></tr>
+<tr><td class="attr">aria-describedby</td><td>Associates descriptive text.</td></tr>
+<tr><td class="attr">aria-hidden</td><td>Controls whether an element is exposed to assistive technology.</td></tr>
+<tr><td class="attr">aria-expanded</td><td>Indicates expanded/collapsed state.</td></tr>
+<tr><td class="attr">aria-controls</td><td>Identifies controlled content.</td></tr>
+<tr><td class="attr">aria-current</td><td>Identifies the current item in a set.</td></tr>
+<tr><td class="attr">aria-live</td><td>Defines live-region announcement behavior.</td></tr>
+<tr><td class="attr">aria-disabled</td><td>Communicates disabled state.</td></tr>
+<tr><td class="attr">aria-selected</td><td>Communicates selection state.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="events">
+<h2>12. JavaScript Event Attributes</h2>
+<div class="card">
+<p>These exist as HTML event-handler attributes, although modern JavaScript commonly uses <code>addEventListener()</code>.</p>
+<div class="grid">
+<div><code>onclick</code> — click</div>
+<div><code>ondblclick</code> — double click</div>
+<div><code>onmousedown</code> — mouse button pressed</div>
+<div><code>onmouseup</code> — mouse button released</div>
+<div><code>onmousemove</code> — mouse movement</div>
+<div><code>onmouseenter</code> — mouse enters</div>
+<div><code>onmouseleave</code> — mouse leaves</div>
+<div><code>onkeydown</code> — key pressed</div>
+<div><code>onkeyup</code> — key released</div>
+<div><code>oninput</code> — input changes</div>
+<div><code>onchange</code> — value committed/changed</div>
+<div><code>onsubmit</code> — form submitted</div>
+<div><code>onfocus</code> — receives focus</div>
+<div><code>onblur</code> — loses focus</div>
+<div><code>onload</code> — resource loads</div>
+<div><code>onerror</code> — error occurs</div>
+<div><code>onscroll</code> — scrolling</div>
+<div><code>onresize</code> — resize</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>13. Important Resource & Security Attributes</h2>
+<div class="card">
+<table>
+<tr><th>Attribute</th><th>Description</th></tr>
+<tr><td class="attr">src</td><td>Resource source.</td></tr>
+<tr><td class="attr">href</td><td>Referenced URL.</td></tr>
+<tr><td class="attr">srcset</td><td>Responsive image source set.</td></tr>
+<tr><td class="attr">sizes</td><td>Responsive image sizing hint.</td></tr>
+<tr><td class="attr">loading</td><td>Loading behavior such as lazy loading.</td></tr>
+<tr><td class="attr">fetchpriority</td><td>Fetch priority hint.</td></tr>
+<tr><td class="attr">crossorigin</td><td>Controls CORS behavior for resource fetching.</td></tr>
+<tr><td class="attr">integrity</td><td>Subresource Integrity value.</td></tr>
+<tr><td class="attr">referrerpolicy</td><td>Controls referrer information.</td></tr>
+<tr><td class="attr">sandbox</td><td>Restricts capabilities of embedded content.</td></tr>
+<tr><td class="attr">allow</td><td>Permissions policy for embedded content.</td></tr>
+<tr><td class="attr">nonce</td><td>Cryptographic nonce used by CSP.</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>14. Deprecated / Obsolete Elements</h2>
+<div class="card">
+<p class="note">These may appear in old code, but should not be used in new HTML.</p>
+<pre>&lt;center&gt;
+&lt;font&gt;
+&lt;marquee&gt;
+&lt;big&gt;
+&lt;strike&gt;
+&lt;tt&gt;
+&lt;frame&gt;
+&lt;frameset&gt;
+&lt;noframes&gt;
+&lt;applet&gt;
+&lt;basefont&gt;
+&lt;dir&gt;
+&lt;keygen&gt;
+&lt;menuitem&gt;
+&lt;param&gt;
+&lt;plaintext&gt;
+&lt;xmp&gt;</pre>
+</div>
+</section>
+
+<section>
+<h2>15. Complete Mini Example</h2>
+<div class="card">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport"
+        content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+
+    &lt;nav&gt;
+      &lt;a href="#home"&gt;Home&lt;/a&gt;
+      &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+
+    &lt;section id="home"&gt;
+      &lt;h2&gt;Welcome&lt;/h2&gt;
+      &lt;p&gt;This is my &lt;strong&gt;HTML&lt;/strong&gt; page.&lt;/p&gt;
+      &lt;img src="photo.jpg"
+           alt="My photo"
+           width="300"&gt;
+    &lt;/section&gt;
+
+    &lt;section id="about"&gt;
+      &lt;h2&gt;About Me&lt;/h2&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;HTML&lt;/li&gt;
+        &lt;li&gt;CSS&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;form action="/submit" method="post"&gt;
+        &lt;label for="email"&gt;Email&lt;/label&gt;
+        &lt;input
+          id="email"
+          name="email"
+          type="email"
+          required&gt;
+
+        &lt;button type="submit"&gt;
+          Send
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 My Website&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</section>
+
+</main>
+
+<footer>
+  HTML Tags & Attributes Reference — Static learning page BY CL0UD3N
+</footer>
+
+</body>
+</html>
+'''
+
+
